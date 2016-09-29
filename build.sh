@@ -23,10 +23,8 @@ sudo apt-get install -y \
 
 sudo mkdir /usr/local/php7
 
-git clone https://github.com/php/php-src.git
+git clone -b PHP-7.0.11 --depth 1 
 cd php-src
-git fetch
-git checkout PHP-7.0.11
 ./buildconf --force
 
 CONFIGURE_STRING="--prefix=/usr/local/php7 \
